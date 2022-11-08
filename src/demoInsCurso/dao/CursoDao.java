@@ -12,10 +12,10 @@ import demoInsCurso.dto.CursoDto;
 public class CursoDao {
 	public List<CursoDto> getCusos() {
 		String sql = "SELECT id_curso, descripcion, precio FROM curso";
-		try (Connection con = UConnection.getConnection();
-				PreparedStatement pstm = con.prepareStatement(sql);
-				ResultSet rs = pstm.executeQuery();) {
-
+		try {
+			Connection con = UConnection.getConnection();
+			PreparedStatement pstm = con.prepareStatement(sql);
+			ResultSet rs = pstm.executeQuery();
 			List<CursoDto> lst = new ArrayList<>();
 			while (rs.next()) {
 				CursoDto dto = new CursoDto();
