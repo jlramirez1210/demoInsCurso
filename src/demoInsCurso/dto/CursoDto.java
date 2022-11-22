@@ -33,4 +33,6 @@ public class CursoDto {
 	public String toString() {
 		return "CursoDto [idCurso=" + idCurso + ", desccripcion=" + desccripcion + ", precio=" + precio + "]";
 	}
+	
+	
 }
